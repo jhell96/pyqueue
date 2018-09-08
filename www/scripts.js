@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var site_base_url = 'http://localhost:5000';
-    var refresh_interval = 2000;
+    var refresh_interval = 1500;
 
     // button handler for help queue
     $("#help-queue-table").on('click', '.btn-floating', function () {
