@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>21M.387 Lab Queue</title>
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" media="screen,projection">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="#" class="brand-logo center">21M.387</a>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m6 section center-align" style="margin-bottom: 20px">
+                    <h5>Help Queue</h5>
+                    
+                    <table class="centered queue-table">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Kerberos</th>
+                              <th></th>
+                          </tr>
+                        </thead>
+
+                        <tbody id="help-queue-table">
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col s12 m6 section center-align">
+                    <h5>Checkoff Queue</h5>
+                    
+                    <table class="centered queue-table">
+                        <thead>
+                          <tr>
+                              <th>Name</th>
+                              <th>Kerberos</th>
+                              <th></th>
+                          </tr>
+                        </thead>
+
+                        <tbody id="checkoff-queue-table">
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
