@@ -35,6 +35,8 @@ def help_queue_manager():
             elif entry not in help_queue:
                 help_queue.append(entry)
                 msg = 'added to queue'
+            else:
+                msg = 'already added to queue'
             return jsonify({'message': msg})
         else:
             msg = 'missing queue data'
@@ -61,6 +63,8 @@ def checkoff_queue_manager():
             elif entry not in checkoff_queue:
                 checkoff_queue.append(entry)
                 msg = 'added to queue'
+            else:
+                msg = 'already added to queue'
             return jsonify({'message': msg})
         else:
             msg = 'missing queue data'
