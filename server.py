@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from flask import Flask, request, jsonify, send_file
+import random
 
 app = Flask(__name__)
 
@@ -12,6 +13,7 @@ checkoff_queue = []
 def index():
     index_file = 'www/index.html'
     return send_file(index_file)
+
 
 @app.route('/scripts.js')
 def js():
@@ -72,6 +74,29 @@ def checkoff_queue_manager():
         return jsonify({'checkoff_queue': checkoff_queue, 'message': msg})
 
     return jsonify({'error_code': 400, 'message': msg})
+
+
+@app.route('/partners', methods=['GET'])
+def get_random_pair():
+    with open('roster.txt') as f:
+        roster = f.read()
+
+    people = roster.split('\n')
+    names = []
+    for p in people:
+        names.append(p.split(',')[0].strip())
+
+    if len(names) % 2 != 0:
+        names.append('')
+
+    random.shuffle(names)
+
+    pairs = ''
+    for i in range(0, len(names), 2):
+        pairs += "<h1>" + names[i] + ", " + names[i+1] + "</h1>"
+
+    return pairs
+
 
 if __name__ == "__main__":
     port = 5000
