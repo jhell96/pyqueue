@@ -93,7 +93,7 @@ def get_random_pair():
 
     pairs = ''
     for i in range(0, len(names), 2):
-        pairs += "<h1>" + names[i] + ", " + names[i+1] + "</h1>"
+        pairs += "<h1>" + str(i//2+1) + ") " + names[i] + ", " + names[i+1] + "</h1>"
 
     return pairs
 
